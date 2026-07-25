@@ -1,0 +1,48 @@
+/* GOOGLE FONT */
+@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap");
+
+@import "tailwindcss";
+
+@theme {
+  /* COLORS */
+  --color-primary-clr: #261a04;
+  --color-secondary-clr: #fdf8f8;
+  --color-tertiary-clr: #8b9c80;
+  --color-bgClr: #fbeae9;
+
+  /* TYPOGRAPHY */
+  --font-cormorant: "Cormorant Garamond", serif;
+  --font-raleway: "Raleway", sans-serif;
+}
+
+html {
+  @apply scroll-smooth;
+}
+
+body {
+  @apply bg-bgClr text-primary-clr font-raleway;
+}
+
+@layer utilities {
+  p {
+    @apply font-raleway;
+  }
+  button {
+    @apply cursor-pointer;
+  }
+}
+
+@layer components {
+  .primary-btn {
+    @apply px-8 py-3 rounded-full bg-tertiary-clr text-secondary-clr border border-tertiary-clr uppercase tracking-widest text-sm transition-all duration-300 hover:bg-transparent hover:text-tertiary-clr;
+  }
+
+  .secondary-btn {
+    @apply px-8 py-3 rounded-full bg-transparent text-secondary-clr border border-secondary-clr uppercase tracking-widest text-sm transition-all duration-300 hover:bg-secondary-clr hover:text-primary-clr;
+  }
+}
+
+.products-slider {
+  --swiper-navigation-color: #8b9c80;
+  --swiper-pagination-color: #8b9c80;
+}
