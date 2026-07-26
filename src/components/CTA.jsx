@@ -36,7 +36,12 @@ const CTA = () => {
       <img
         src="/images/decorative-flower1.png"
         alt=""
-        className="absolute -right-20 -bottom-20 w-[450px] opacity-15 pointer-events-none z-0"
+        className="absolute -right-20 -bottom-20 w-[450px] opacity-50 pointer-events-none z-0 scale-x-[-1]"
+      />
+      <img
+        src="/images/decorative-flower1.png"
+        alt=""
+        className="hidden lg:block absolute -left-20 -bottom-20 w-[450px] opacity-50 pointer-events-none z-0"
       />
     </section>
   );
