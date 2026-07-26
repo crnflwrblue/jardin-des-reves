@@ -5,10 +5,38 @@ const Footer = () => {
   return (
     <footer id="contact" className="bg-neutral">
       <div className="max-w-7xl mx-auto px-6 py-10">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10">
+        {/* NEWSLETTER */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6 items-center">
+          <div className="">
+            <h3 className="font-cormorant text-4xl font-semibold mb-2 text-champagne">
+              Stay in Bloom
+            </h3>
+
+            <p className="text-gray">
+              Subscribe for floral inspiration, exclusive offers, and early
+              access to new arrivals.
+            </p>
+          </div>
+
+          <div className="flex items-center">
+            <div className="flex w-full">
+              <input
+                type="email"
+                placeholder="youremail@email.com"
+                className="border border-gray/30 bg-neutral/10 text-gray placeholder:text-gray/50 rounded-l-md px-4 py-3 w-full outline-none"
+              />
+
+              <button className="bg-lavender text-white px-5 rounded-r-md hover:bg-champagne hover:text-dark transition">
+                Subscribe
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div className=" border-t border-gray/20 mt-4 pt-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
           {/* LOGO */}
           <div>
-            <h2 className="text-3xl font-cormorant font-semibold">
+            <h2 className="text-4xl font-cormorant font-semibold">
               Jardin des Rêves
             </h2>
 
@@ -74,34 +102,9 @@ const Footer = () => {
               ))}
             </div>
           </div>
-
-          {/* NEWSLETTER */}
-
-          <div>
-            <h3 className="font-semibold uppercase mb-4 text-champagne">
-              Stay in Bloom
-            </h3>
-
-            <p className=" mb-4 text-gray">
-              Subscribe for floral inspiration, exclusive offers, and early
-              access to new arrivals.
-            </p>
-
-            <div className="flex">
-              <input
-                type="email"
-                placeholder="youremail@email.com"
-                className="border border-gray/30 bg-neutral/10 text-gray placeholder:text-gray/50 rounded-l-md px-4 py-3 w-full outline-none"
-              />
-
-              <button className="bg-lavender text-white px-5 rounded-r-md hover:bg-champagne hover:text-dark transition">
-                Subscribe
-              </button>
-            </div>
-          </div>
         </div>
 
-        <div className="border-t border-gray/20 mt-8 pt-4 text-center text-sm text-gray">
+        <div className="mt-4 pt-2 text-center text-sm text-gray">
           © 2026 Jardin des Rêves. All Rights Reserved.
         </div>
       </div>
