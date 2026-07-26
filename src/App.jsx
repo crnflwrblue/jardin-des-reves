@@ -6,6 +6,7 @@ import Products from "./components/Products";
 import Why from "./components/Why";
 import CTA from "./components/CTA";
 import Footer from "./components/Footer";
+import Category from "./components/Category";
 
 function App() {
   return (
@@ -13,8 +14,9 @@ function App() {
       <Header />
       <main>
         <Hero />
-        <About />
         <Products />
+        <About />
+        <Category />
         <Why />
         <CTA />
       </main>

@@ -21,11 +21,11 @@ const Header = () => {
   }, []);
 
   return (
-    <header className="sticky top-0 z-50 transition-all duration-300 bg-secondary-clr">
+    <header className="sticky top-0 z-50 transition-all duration-300 bg-neutral">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
           {/* LOGO */}
-          <h1 className="text-2xl font-bold font-cormorant">
+          <h1 className="text-2xl font-bold font-cormorant text-dark">
             Jardin des Rêves
           </h1>
 
@@ -37,7 +37,7 @@ const Header = () => {
                   <li key={item.id}>
                     <a
                       href={item.link}
-                      className="hover:text-tertiary-clr transition-colors"
+                      className="hover:text-sage transition-colors"
                     >
                       {item.name}
                     </a>
@@ -48,22 +48,16 @@ const Header = () => {
 
             {/* ICONS */}
             <div className="flex items-center gap-5 ">
-              <button
-                className="hover:text-tertiary-clr relative"
-                aria-label="Search"
-              >
+              <button className="hover:text-blush relative" aria-label="Search">
                 <RiSearchLine size={20} />
               </button>
               <button
-                className="hover:text-tertiary-clr relative"
+                className="hover:text-blush relative"
                 aria-label="Wishlist"
               >
                 <RiHeartLine size={20} />
               </button>
-              <button
-                className="hover:text-tertiary-clr relative"
-                aria-label="Cart"
-              >
+              <button className="hover:text-blush relative" aria-label="Cart">
                 <RiShoppingBagLine size={20} />
               </button>
             </div>
@@ -75,41 +69,31 @@ const Header = () => {
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
             aria-label="Toggle mobile menu"
           >
-            <RiMenuLine className="hover:text-tertiary-clr" size={24} />
+            <RiMenuLine className="hover:text-blush" size={24} />
           </button>
         </div>
 
         {isMobileMenuOpen && (
-          <div className="md:hidden py-4 border-t bg-secondary-clr/50">
+          <div className="md:hidden py-4 border-t border-sage/20 bg-neutral/80">
             <nav className="flex flex-col gap-4 text-center">
               {navItems.map((item) => (
-                <a
-                  key={item.id}
-                  href={item.link}
-                  className="hover:text-tertiary-clr"
-                >
+                <a key={item.id} href={item.link} className="hover:text-blush">
                   {item.name}
                 </a>
               ))}
             </nav>
 
             <div className="flex justify-center gap-8 mt-6">
-              <button
-                className="hover:text-tertiary-clr relative"
-                aria-label="Search"
-              >
+              <button className="hover:text-blush relative" aria-label="Search">
                 <RiSearchLine size={20} />
               </button>
               <button
-                className="hover:text-tertiary-clr relative"
+                className="hover:text-blush relative"
                 aria-label="Wishlist"
               >
                 <RiHeartLine size={20} />
               </button>
-              <button
-                className="hover:text-tertiary-clr relative"
-                aria-label="Cart"
-              >
+              <button className="hover:text-blush relative" aria-label="Cart">
                 <RiShoppingBagLine size={20} />
               </button>
             </div>

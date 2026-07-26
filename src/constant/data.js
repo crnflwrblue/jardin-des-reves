@@ -1,5 +1,5 @@
 import { RiArrowRightLine } from "react-icons/ri"
-import { FiTruck, FiPackage } from "react-icons/fi";
+import { FiTruck, FiPackage, FiShoppingCart } from "react-icons/fi";
 import { GiFlowerPot } from "react-icons/gi";
 import { PiLeaf } from "react-icons/pi";
 import {
@@ -20,6 +20,36 @@ export const navItems =[
 ];
 
 export const productItems = [
+  {
+    id: 1,
+    name: "Pearl Garden",
+    price: "$68.00",
+    image: "/images/bouquet1.jpg",
+    rating: 5,
+    reviews: 128,
+    icon: FiShoppingCart,
+  },
+  {
+    id: 2,
+    name: "Lavender Dream",
+    price: "$74.00",
+    image: "/images/bouquet2.jpg",
+    rating: 4,
+    reviews: 94,
+    icon: FiShoppingCart,
+  },
+  {
+    id: 3,
+    name: "Winter Noel",
+    price: "$86.00",
+    image: "/images/bouquet3.jpg",
+    rating: 3,
+    reviews: 76,
+    icon: FiShoppingCart,
+  },
+];
+
+export const categoryItems = [
   {
     id: 1,
     name: "Everyday Blooms",

@@ -2,7 +2,7 @@ import React from "react";
 
 const About = () => {
   return (
-    <section id="about" className="relative py-20 overflow-hidden">
+    <section id="about" className="relative py-20 overflow-hidden bg-sage">
       {/* DECORATIVE FLOWER */}
       <img
         src="/images/decorative-flower2.png"
@@ -23,11 +23,11 @@ const About = () => {
 
           {/* CONTENT */}
           <div className="space-y-6">
-            <h2 className="uppercase tracking-[0.2em] text-sm text-tertiary-clr">
+            <h2 className="uppercase tracking-[0.2em] text-sm text-champagne">
               About Us
             </h2>
 
-            <h3 className="font-cormorant text-5xl font-semibold leading-tight">
+            <h3 className="font-cormorant text-5xl font-semibold leading-tight text-neutral">
               A Garden of Dreams,
               <br />
               Crafted with Love
@@ -35,35 +35,35 @@ const About = () => {
 
             {/* DIVIDER */}
             <div className="flex items-center gap-3 my-8">
-              <div className="w-12 h-px bg-tertiary-clr" />
-              <div className="w-2 h-2 rounded-full bg-tertiary-clr" />
-              <div className="w-12 h-px bg-tertiary-clr" />
+              <div className="w-12 h-px bg-champagne" />
+              <div className="w-2 h-2 rounded-full bg-champagne" />
+              <div className="w-12 h-px bg-champagne" />
             </div>
 
-            <p className="leading-8">
+            <p className="leading-8 text-neutral">
               At{" "}
-              <span className="font-cormorant font-semibold">
+              <span className="font-cormorant font-semibold text-champagne">
                 Jardin des Rêves
               </span>
               , we believe flowers are more than beautiful arrangements, they're
               expressions of love, gratitude, celebration, and remembrance.
             </p>
 
-            <p className="leading-8">
+            <p className="leading-8 text-neutral">
               Inspired by the charm of European gardens and the poetry found in
               nature, each bouquet is thoughtfully designed using premium
               seasonal blooms, delicate textures, and harmonious color palettes.
             </p>
 
-            <p className="italic font-cormorant text-xl">
+            <p className="italic font-cormorant text-xl text-champagne">
               "Because every beautiful moment deserves beautiful flowers."
             </p>
 
             {/* DIVIDER */}
             <div className="flex items-center gap-2 my-6">
-              <div className="h-px w-12 bg-tertiary-clr" />
-              <div className="w-2 h-2 rounded-full bg-tertiary-clr" />
-              <div className="h-px w-12 bg-tertiary-clr" />
+              <div className="h-px w-12 bg-champagne" />
+              <div className="w-2 h-2 rounded-full bg-champagne" />
+              <div className="h-px w-12 bg-champagne" />
             </div>
           </div>
         </div>

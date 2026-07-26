@@ -5,10 +5,13 @@
 
 @theme {
   /* COLORS */
-  --color-primary-clr: #261a04;
-  --color-secondary-clr: #fdf8f8;
-  --color-tertiary-clr: #8b9c80;
-  --color-bgClr: #fbeae9;
+  --color-neutral: #fcf8f5;
+  --color-sage: #a3b99b;
+  --color-blush: #ffbee1;
+  --color-lavender: #d2c7e0;
+  --color-champagne: #ffd786;
+  --color-gray: #8a8887;
+  --color-dark: #3f4a3c;
 
   /* TYPOGRAPHY */
   --font-cormorant: "Cormorant Garamond", serif;
@@ -20,7 +23,7 @@ html {
 }
 
 body {
-  @apply bg-bgClr text-primary-clr font-raleway;
+  @apply bg-neutral text-dark font-raleway antialiased;
 }
 
 @layer utilities {
@@ -34,15 +37,15 @@ body {
 
 @layer components {
   .primary-btn {
-    @apply px-8 py-3 rounded-full bg-tertiary-clr text-secondary-clr border border-tertiary-clr uppercase tracking-widest text-sm transition-all duration-300 hover:bg-transparent hover:text-tertiary-clr;
+    @apply px-8 py-3 rounded-full bg-sage text-neutral border border-sage uppercase tracking-[0.2em] text-sm font-medium transition-all duration-300 hover:bg-dark hover:border-dark;
   }
 
   .secondary-btn {
-    @apply px-8 py-3 rounded-full bg-transparent text-secondary-clr border border-secondary-clr uppercase tracking-widest text-sm transition-all duration-300 hover:bg-secondary-clr hover:text-primary-clr;
+    @apply px-8 py-3 rounded-full bg-transparent text-neutral border border-neutral uppercase tracking-[0.2em] text-sm font-medium transition-all duration-300 hover:bg-neutral hover:text-dark;
   }
 }
 
 .products-slider {
-  --swiper-navigation-color: #8b9c80;
-  --swiper-pagination-color: #8b9c80;
+  --swiper-navigation-color: var(--color-blush);
+  --swiper-pagination-color: var(--color-sage);
 }
