@@ -16,7 +16,7 @@ The React Compiler is not enabled on this template because of its impact on dev 
 If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
 
 ## Stock Images
-Photo by cottonbro studio from Pexels: https://www.pexels.com/photo/flowers-and-apples-on-white-sheet-10295078/
+Photo by cottonbro studio from Pexels: https://www.pexels.com/photo/flowers-and-apples-on-white-sheet-10295078/ &nbsp
 Photo by Secret Garden from Pexels: https://www.pexels.com/photo/colorful-spring-bouquet-in-modern-vase-2879820/
 Photo by Secret Garden from Pexels: https://www.pexels.com/photo/fresh-minimalistic-flower-compositions-on-white-table-2879815/
 Photo by Secret Garden from Pexels: https://www.pexels.com/photo/photo-of-flowers-in-vase-2879813/
