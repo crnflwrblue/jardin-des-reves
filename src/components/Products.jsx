@@ -69,10 +69,10 @@ const Products = () => {
               },
             }}
           >
-            {productItems.map((product) => (
+            {productItems.map((product, index) => (
               <SwiperSlide key={product.id} className="pb-12">
                 <motion.div
-                  variants={cardAnimation(product * 0.15)}
+                  variants={cardAnimation(index * 0.15)}
                   initial="hidden"
                   whileInView="visible"
                   viewport={viewport}

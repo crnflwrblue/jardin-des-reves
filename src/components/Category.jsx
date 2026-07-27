@@ -48,10 +48,10 @@ const Category = () => {
           whileInView="visible"
           viewport={viewport}
         >
-          {categoryItems.map((category) => (
+          {categoryItems.map((category, index) => (
             <motion.div
               key={category.id}
-              variants={cardAnimation(category * 0.15)}
+              variants={cardAnimation(index * 0.15)}
               initial="hidden"
               whileInView="visible"
               viewport={viewport}
