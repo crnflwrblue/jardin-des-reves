@@ -32,6 +32,8 @@ Photo by Andy Lee from Pexels: https://www.pexels.com/photo/vibrant-autumn-flowe
 https://www.magnific.com/free-vector/hand-drawn-flat-design-simple-flower-outline_25563968.htm#fromView=serie&page=1&position=7<br>
 https://www.magnific.com/free-vector/hand-drawn-flat-design-simple-flower-outline_25563949.htm#fromView=search&page=1&position=8&uuid=f3a769ff-732b-4827-aa16-be0e43c6cdbb&query=Flower+outline+svg
 
+### Favicon
+https://www.magnific.com/icon/flower-bouquet_14372679#fromView=search&page=1&position=0&uuid=2bb25016-b97c-482b-92a2-47e2bb68b7a2
 
 ### npm dependencies
 npm i react-icons<br>
