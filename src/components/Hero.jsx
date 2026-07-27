@@ -1,6 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { fade, fadeUp, viewport } from "../motion/animation";
+import { fadeIn, fadeInUp, viewport } from "../motion/animation";
 
 const Hero = () => {
   return (
@@ -11,7 +11,7 @@ const Hero = () => {
           src="/images/hero-background.jpg"
           alt=""
           className="absolute inset-0 w-full h-full object-cover"
-          variants={fade}
+          variants={fadeIn}
           initial="hidden"
           whileInView="visible"
           viewport={viewport}
@@ -21,7 +21,7 @@ const Hero = () => {
         {/* CONTENT */}
         <motion.div
           className="relative z-10 flex h-full items-center justify-center"
-          variants={fadeUp(0)}
+          variants={fadeInUp(0)}
           initial="hidden"
           whileInView="visible"
           viewport={viewport}
@@ -35,7 +35,7 @@ const Hero = () => {
             </h1>
             <motion.p
               className="leading-8 text-neutral/90"
-              variants={fadeUp(0.2)}
+              variants={fadeInUp(0.2)}
               initial="hidden"
               whileInView="visible"
               viewport={viewport}

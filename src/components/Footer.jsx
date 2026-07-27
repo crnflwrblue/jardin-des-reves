@@ -1,14 +1,14 @@
 import React from "react";
 import { footerSocials, footerLinks, footerContact } from "../constant/data";
 import { motion } from "framer-motion";
-import { fadeUp } from "../motion/animation";
+import { fadeInUp } from "../motion/animation";
 
 const Footer = () => {
   return (
     <footer id="contact" className="bg-neutral">
       <motion.div
         className="max-w-7xl mx-auto px-6 py-10"
-        variants={fadeUp(0)}
+        variants={fadeInUp(0)}
         initial="hidden"
         whileInView="visible"
         viewport={viewport}
@@ -43,7 +43,7 @@ const Footer = () => {
 
         <motion.div
           className=" border-t border-gray/20 mt-4 pt-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10"
-          variants={fadeUp(0.2)}
+          variants={fadeInUp(0.2)}
           initial="hidden"
           whileInView="visible"
           viewport={viewport}
@@ -120,7 +120,7 @@ const Footer = () => {
 
         <motion.div
           className="mt-4 pt-2 text-center text-sm text-gray"
-          variants={fadeUp(0.4)}
+          variants={fadeInUp(0.4)}
           initial="hidden"
           whileInView="visible"
           viewport={viewport}

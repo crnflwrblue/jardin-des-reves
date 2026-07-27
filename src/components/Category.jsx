@@ -3,7 +3,7 @@ import { RiArrowRightLine } from "react-icons/ri";
 import { categoryItems } from "../constant/data.js";
 import { motion } from "framer-motion";
 import {
-  fadeUp,
+  fadeInUp,
   staggerContainer,
   cardAnimation,
   viewport,
@@ -15,7 +15,7 @@ const Category = () => {
       <div className="max-w-7xl mx-auto px-6">
         <motion.div
           className="text-center mb-14"
-          variants={fadeUp(0)}
+          variants={fadeInUp(0)}
           initial="hidden"
           whileInView="visible"
           viewport={viewport}

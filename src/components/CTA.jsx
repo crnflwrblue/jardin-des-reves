@@ -1,13 +1,13 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { fadeUp } from "../motion/animation";
+import { fadeInUp } from "../motion/animation";
 
 const CTA = () => {
   return (
     <section className="bg-sage relative overflow-hidden">
       <motion.div
         className="max-w-7xl mx-auto px-8 py-20 z-10"
-        variants={fadeUp(0)}
+        variants={fadeInUp(0)}
         initial="hidden"
         whileInView="visible"
         viewport={viewport}

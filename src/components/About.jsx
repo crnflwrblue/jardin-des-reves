@@ -1,6 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { fadeLeft, fadeRight, viewport } from "../motion/animation";
+import { fadeInLeft, fadeInRight, viewport } from "../motion/animation";
 
 const About = () => {
   return (
@@ -16,7 +16,7 @@ const About = () => {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           {/* IMAGE */}
           <motion.div
-            variants={fadeLeft}
+            variants={fadeInLeft}
             initial="hidden"
             whileInView="visible"
             viewport={viewport}
@@ -31,7 +31,7 @@ const About = () => {
           {/* CONTENT */}
           <motion.div
             className="space-y-6"
-            variants={fadeRight}
+            variants={fadeInRight}
             initial="hidden"
             whileInView="visible"
             viewport={viewport}

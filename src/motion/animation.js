@@ -1,17 +1,14 @@
-// VIEWPORT SETTINGS
 export const viewport = {
   once: true,
   amount: 0.3,
 };
 
-// TRANSITION
 const transition = {
   duration: 0.8,
   ease: "easeOut",
 };
 
-// FADE UP
-export const fadeUp = (delay = 0) => ({
+export const fadeInUp = (delay = 0) => ({
   hidden: {
     opacity: 0,
     y: 30,
@@ -26,8 +23,7 @@ export const fadeUp = (delay = 0) => ({
   },
 });
 
-// FADE LEFT
-export const fadeLeft = {
+export const fadeInLeft = {
   hidden: {
     opacity: 0,
     x: -60,
@@ -39,8 +35,7 @@ export const fadeLeft = {
   },
 };
 
-// FADE RIGHT
-export const fadeRight = {
+export const fadeInRight = {
   hidden: {
     opacity: 0,
     x: 60,
@@ -52,8 +47,7 @@ export const fadeRight = {
   },
 };
 
-// FADE
-export const fade = {
+export const fadeIn = {
   hidden: {
     opacity: 0,
   },
@@ -63,7 +57,6 @@ export const fade = {
   },
 };
 
-// SECTION CONTAINER
 export const staggerContainer = {
   hidden: {},
   visible: {
@@ -74,7 +67,6 @@ export const staggerContainer = {
   },
 };
 
-// CARD
 export const cardAnimation = (delay = 0) => ({
   hidden: {
     opacity: 0,
@@ -90,16 +82,3 @@ export const cardAnimation = (delay = 0) => ({
     },
   },
 });
-
-// DECORATIVE FLOWER
-export const floatingFlower = {
-  animate: {
-    y: [0, -4, 0],
-    rotate: [0, 2, 0, -2, 0],
-  },
-  transition: {
-    duration: 8,
-    repeat: Infinity,
-    ease: "easeInOut",
-  },
-};

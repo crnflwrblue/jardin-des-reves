@@ -1,7 +1,7 @@
 import React from "react";
 import { whyItems } from "../constant/data";
 import { motion } from "framer-motion";
-import { fadeUp } from "../motion/animation";
+import { fadeInUp } from "../motion/animation";
 
 const Why = () => {
   return (
@@ -11,7 +11,7 @@ const Why = () => {
           {whyItems.map((item, index) => (
             <motion.div
               key={index}
-              variants={fadeUp(index * 0.15)}
+              variants={fadeInUp(index * 0.15)}
               initial="hidden"
               whileInView="visible"
               viewport={viewport}

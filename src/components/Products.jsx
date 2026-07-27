@@ -7,7 +7,7 @@ import { Navigation, Pagination, Autoplay } from "swiper/modules";
 import { FaStar, FaRegStar } from "react-icons/fa";
 
 import { motion } from "framer-motion";
-import { cardAnimation, fadeUp, viewport } from "../motion/animation.js";
+import { cardAnimation, fadeInUp, viewport } from "../motion/animation.js";
 
 import { productItems } from "../constant/data.js";
 
@@ -17,7 +17,7 @@ const Products = () => {
       <div className="max-w-7xl mx-auto px-6">
         <motion.div
           className="text-center mb-14"
-          variants={fadeUp(0)}
+          variants={fadeInUp(0)}
           initial="hidden"
           whileInView="visible"
           viewport={viewport}
@@ -39,7 +39,7 @@ const Products = () => {
         </motion.div>
 
         <motion.div
-          variants={fadeUp(0.2)}
+          variants={fadeInUp(0.2)}
           initial="hidden"
           whileInView="visible"
           viewport={viewport}
