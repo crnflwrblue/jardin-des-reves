@@ -28,7 +28,7 @@ const CTA = () => {
             </p>
 
             <div className="flex gap-4 flex-wrap">
-              <button className="bg-neutral text-sage px-7 py-3 rounded-md font-medium hover:bg-champagne hover:text-dark transition">
+              <button className="bg-neutral text-sage px-7 py-3 rounded-md font-medium hover:bg-champagne hover:text-dark transition z-10">
                 Order Your Bouquet
               </button>
 

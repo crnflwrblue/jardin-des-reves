@@ -47,12 +47,12 @@ const Hero = () => {
             </motion.p>
 
             {/* BUTTON */}
-            <div className="mt-8 flex items-center justify-center gap-4">
+            <div className="mt-8 flex items-center justify-center gap-4 flex-col sm:flex-row">
               <button className="primary-btn">Shop Collection</button>{" "}
               <button className="secondary-btn">Build Your Bouquet</button>
             </div>
 
-            <p className="flex justify-center items-center gap-4 text-sm uppercase tracking-[0.2em] text-neutral/80">
+            <p className="max-w-xs sm:max-w-2xl mx-auto flex flex-wrap justify-center items-center gap-x-3 sm:gap-x-4 gap-y-2 text-xs sm:text-sm uppercase tracking-widest text-neutral/80">
               <span>Fresh Flowers</span>
               <span className="text-champagne">✿</span>
               <span>Artisan Arrangements</span>

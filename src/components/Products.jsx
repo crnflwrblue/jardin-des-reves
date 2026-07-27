@@ -56,7 +56,6 @@ const Products = () => {
             }}
             speed={900}
             spaceBetween={25}
-            slidesPerView={6}
             breakpoints={{
               0: {
                 slidesPerView: 1,

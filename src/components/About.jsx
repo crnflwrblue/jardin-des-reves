@@ -24,7 +24,7 @@ const About = () => {
             <img
               src="/images/about-us.jpg"
               alt="About Jardin des Rêves"
-              className="w-full h-150 object-cover rounded-lg"
+              className="w-full lg:h-150 object-cover rounded-lg"
             />
           </motion.div>
 

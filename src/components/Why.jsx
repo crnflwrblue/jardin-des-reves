@@ -7,7 +7,7 @@ const Why = () => {
   return (
     <section className="bg-lavender py-10">
       <div className="max-w-7xl mx-auto px-6">
-        <div className="grid md:grid-cols-4 gap-8">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
           {whyItems.map((item, index) => (
             <motion.div
               key={index}
@@ -15,9 +15,9 @@ const Why = () => {
               initial="hidden"
               whileInView="visible"
               viewport={viewport}
-              className="flex items-center justify-center gap-4 md:border-r last:border-r-0 border-champagne pr-5"
+              className="flex items-center justify-start gap-4 w-full lg:border-r last:border-r-0 border-champagne pr-5"
             >
-              <div className="text-champagne flex-shrink-0">
+              <div className="text-champagne w-10 flex justify-center flex-shrink-0">
                 <item.icon size={30} />
               </div>
 
