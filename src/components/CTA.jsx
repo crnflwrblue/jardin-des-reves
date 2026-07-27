@@ -1,6 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { fadeInUp } from "../motion/animation";
+import { fadeInUp, viewport } from "../motion/animation";
 
 const CTA = () => {
   return (

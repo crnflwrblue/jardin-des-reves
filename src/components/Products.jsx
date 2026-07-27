@@ -49,7 +49,7 @@ const Products = () => {
             modules={[Navigation, Pagination, Autoplay]}
             navigation
             pagination={{ clickable: true }}
-            loop={true}
+            loop={productItems.length > 3}
             autoplay={{
               delay: 3500,
               disableOnInteraction: false,

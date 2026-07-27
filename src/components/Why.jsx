@@ -1,7 +1,7 @@
 import React from "react";
 import { whyItems } from "../constant/data";
 import { motion } from "framer-motion";
-import { fadeInUp } from "../motion/animation";
+import { fadeInUp, viewport } from "../motion/animation";
 
 const Why = () => {
   return (
