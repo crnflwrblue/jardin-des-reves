@@ -77,7 +77,7 @@ const Products = () => {
                   whileInView="visible"
                   viewport={viewport}
                   whileHover={{ y: -6 }}
-                  className="group overflow-hidden rounded-xl bg-white shadow-sm"
+                  className="group overflow-hidden rounded-xl bg-white shadow-sm hover:shadow-lg transition-all duration-300"
                 >
                   <div className="aspect-4/5">
                     <img
@@ -87,18 +87,18 @@ const Products = () => {
                     />
                   </div>
 
-                  <div className="p-4">
+                  <div className="px-5 py-4">
                     <div className="flex justify-between items-start">
                       <div>
-                        <h3 className="font-cormorant text-2xl font-semibold text-blush">
+                        <h3 className="font-cormorant text-2xl font-semibold text-dark">
                           {product.name}
                         </h3>
 
-                        <p className="mt-1 font-medium text-sage">
+                        <p className="mt-2 font-semibold text-sage">
                           {product.price}
                         </p>
 
-                        <div className="mt-2 flex items-center gap-1">
+                        <div className="mt-3 flex items-center gap-1">
                           {[...Array(5)].map((_, index) =>
                             index < product.rating ? (
                               <FaStar key={index} className="text-champagne" />

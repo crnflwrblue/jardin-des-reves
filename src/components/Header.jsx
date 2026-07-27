@@ -32,7 +32,7 @@ const Header = () => {
           {/* LG MENU */}
           <div className="hidden md:flex items-center gap-10">
             <nav>
-              <ul className="flex items-center gap-8 text-sm font-medium">
+              <ul className="flex items-center gap-8 text-base font-medium">
                 {navItems.map((item) => (
                   <li key={item.id}>
                     <a

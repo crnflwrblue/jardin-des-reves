@@ -16,7 +16,7 @@ const Hero = () => {
           whileInView="visible"
           viewport={viewport}
         />
-        <div className="absolute inset-0 bg-dark/40" />
+        <div className="absolute inset-0 bg-dark/50" />
 
         {/* CONTENT */}
         <motion.div
