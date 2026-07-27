@@ -1,12 +1,25 @@
 import React from "react";
 import { RiArrowRightLine } from "react-icons/ri";
 import { categoryItems } from "../constant/data.js";
+import { motion } from "framer-motion";
+import {
+  fadeUp,
+  staggerContainer,
+  cardAnimation,
+  viewport,
+} from "../motion/animation.js";
 
 const Category = () => {
   return (
     <section id="collections" className="py-24 scroll-mt-20 bg-neutral">
       <div className="max-w-7xl mx-auto px-6">
-        <div className="text-center mb-14">
+        <motion.div
+          className="text-center mb-14"
+          variants={fadeUp(0)}
+          initial="hidden"
+          whileInView="visible"
+          viewport={viewport}
+        >
           <p className="uppercase tracking-[0.3em] text-sm text-blush">
             COLLECTIONS
           </p>
@@ -26,12 +39,22 @@ const Category = () => {
             Discover thoughtfully curated floral collections for every
             celebration, season, and heartfelt moment.
           </p>
-        </div>
+        </motion.div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+        <motion.div
+          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8"
+          variants={staggerContainer}
+          initial="hidden"
+          whileInView="visible"
+          viewport={viewport}
+        >
           {categoryItems.map((category) => (
-            <div
+            <motion.div
               key={category.id}
+              variants={cardAnimation(category * 0.15)}
+              initial="hidden"
+              whileInView="visible"
+              viewport={viewport}
               className="group relative overflow-hidden rounded-2xl border border-sage/20 shadow-sm transition-all duration-500 hover:-translate-y-2 hover:shadow-xl "
             >
               {/* IMAGE */}
@@ -63,9 +86,9 @@ const Category = () => {
                   <RiArrowRightLine />
                 </button>
               </div>
-            </div>
+            </motion.div>
           ))}
-        </div>
+        </motion.div>
       </div>
     </section>
   );

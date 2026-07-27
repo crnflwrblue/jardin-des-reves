@@ -2,8 +2,12 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
+
 import { Navigation, Pagination, Autoplay } from "swiper/modules";
 import { FaStar, FaRegStar } from "react-icons/fa";
+
+import { motion } from "framer-motion";
+import { cardAnimation, fadeUp, viewport } from "../motion/animation.js";
 
 import { productItems } from "../constant/data.js";
 
@@ -11,7 +15,13 @@ const Products = () => {
   return (
     <section id="shop" className="py-24 bg-neutral">
       <div className="max-w-7xl mx-auto px-6">
-        <div className="text-center mb-14">
+        <motion.div
+          className="text-center mb-14"
+          variants={fadeUp(0)}
+          initial="hidden"
+          whileInView="visible"
+          viewport={viewport}
+        >
           <p className="uppercase tracking-[0.3em] text-sm text-blush">
             BEST SELLERS
           </p>
@@ -26,78 +36,92 @@ const Products = () => {
             ✿
             <div className="w-16 h-px bg-blush" />
           </div>
-        </div>
+        </motion.div>
 
-        <Swiper
-          className="products-slider"
-          modules={[Navigation, Pagination, Autoplay]}
-          navigation
-          pagination={{ clickable: true }}
-          loop={true}
-          autoplay={{
-            delay: 3500,
-            disableOnInteraction: false,
-          }}
-          speed={900}
-          spaceBetween={25}
-          slidesPerView={6}
-          breakpoints={{
-            0: {
-              slidesPerView: 1,
-            },
-            640: {
-              slidesPerView: 2,
-            },
-            1024: {
-              slidesPerView: 3,
-            },
-          }}
+        <motion.div
+          variants={fadeUp(0.2)}
+          initial="hidden"
+          whileInView="visible"
+          viewport={viewport}
         >
-          {productItems.map((product) => (
-            <SwiperSlide key={product.id} className="pb-12">
-              <div className="group overflow-hidden rounded-xl bg-white shadow-sm">
-                <div className="aspect-4/5">
-                  <img
-                    src={product.image}
-                    alt={product.name}
-                    className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
-                  />
-                </div>
-
-                <div className="p-4">
-                  <div className="flex justify-between items-start">
-                    <div>
-                      <h3 className="font-cormorant text-2xl font-semibold text-blush">
-                        {product.name}
-                      </h3>
-
-                      <p className="mt-1 font-medium text-sage">
-                        {product.price}
-                      </p>
-
-                      <div className="mt-2 flex items-center gap-1">
-                        {[...Array(5)].map((_, index) =>
-                          index < product.rating ? (
-                            <FaStar key={index} className="text-champagne" />
-                          ) : (
-                            <FaRegStar key={index} className="text-gray/40" />
-                          ),
-                        )}
-                        <span className="ml-1 text-gray">
-                          ({product.reviews})
-                        </span>
-                      </div>
-                    </div>
-
-                    <button className="flex mt-2 h-9 w-9 items-center justify-center rounded-full bg-sage text-neutral hover:bg-dark transition hover:scale-110">
-                      <product.icon size={18} />
-                    </button>
+          <Swiper
+            className="products-slider"
+            modules={[Navigation, Pagination, Autoplay]}
+            navigation
+            pagination={{ clickable: true }}
+            loop={true}
+            autoplay={{
+              delay: 3500,
+              disableOnInteraction: false,
+            }}
+            speed={900}
+            spaceBetween={25}
+            slidesPerView={6}
+            breakpoints={{
+              0: {
+                slidesPerView: 1,
+              },
+              640: {
+                slidesPerView: 2,
+              },
+              1024: {
+                slidesPerView: 3,
+              },
+            }}
+          >
+            {productItems.map((product) => (
+              <SwiperSlide key={product.id} className="pb-12">
+                <motion.div
+                  variants={cardAnimation(product * 0.15)}
+                  initial="hidden"
+                  whileInView="visible"
+                  viewport={viewport}
+                  whileHover={{ y: -6 }}
+                  className="group overflow-hidden rounded-xl bg-white shadow-sm"
+                >
+                  <div className="aspect-4/5">
+                    <img
+                      src={product.image}
+                      alt={product.name}
+                      className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                    />
                   </div>
-                </div>
-              </div>
-            </SwiperSlide>
-          ))}
-        </Swiper>
+
+                  <div className="p-4">
+                    <div className="flex justify-between items-start">
+                      <div>
+                        <h3 className="font-cormorant text-2xl font-semibold text-blush">
+                          {product.name}
+                        </h3>
+
+                        <p className="mt-1 font-medium text-sage">
+                          {product.price}
+                        </p>
+
+                        <div className="mt-2 flex items-center gap-1">
+                          {[...Array(5)].map((_, index) =>
+                            index < product.rating ? (
+                              <FaStar key={index} className="text-champagne" />
+                            ) : (
+                              <FaRegStar key={index} className="text-gray/40" />
+                            ),
+                          )}
+                          <span className="ml-1 text-gray">
+                            ({product.reviews})
+                          </span>
+                        </div>
+                      </div>
+
+                      <button className="flex mt-2 h-9 w-9 items-center justify-center rounded-full bg-sage text-neutral hover:bg-dark transition hover:scale-110">
+                        <product.icon size={18} />
+                      </button>
+                    </div>
+                  </div>
+                </motion.div>
+              </SwiperSlide>
+            ))}
+          </Swiper>
+        </motion.div>
       </div>
     </section>
   );

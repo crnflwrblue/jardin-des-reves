@@ -1,10 +1,18 @@
 import React from "react";
 import { footerSocials, footerLinks, footerContact } from "../constant/data";
+import { motion } from "framer-motion";
+import { fadeUp } from "../motion/animation";
 
 const Footer = () => {
   return (
     <footer id="contact" className="bg-neutral">
-      <div className="max-w-7xl mx-auto px-6 py-10">
+      <motion.div
+        className="max-w-7xl mx-auto px-6 py-10"
+        variants={fadeUp(0)}
+        initial="hidden"
+        whileInView="visible"
+        viewport={viewport}
+      >
         {/* NEWSLETTER */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6 items-center">
           <div className="">
@@ -33,7 +41,13 @@ const Footer = () => {
           </div>
         </div>
 
-        <div className=" border-t border-gray/20 mt-4 pt-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
+        <motion.div
+          className=" border-t border-gray/20 mt-4 pt-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10"
+          variants={fadeUp(0.2)}
+          initial="hidden"
+          whileInView="visible"
+          viewport={viewport}
+        >
           {/* LOGO */}
           <div>
             <h2 className="text-4xl font-cormorant font-semibold">
@@ -102,12 +116,18 @@ const Footer = () => {
               ))}
             </div>
           </div>
-        </div>
+        </motion.div>
 
-        <div className="mt-4 pt-2 text-center text-sm text-gray">
+        <motion.div
+          className="mt-4 pt-2 text-center text-sm text-gray"
+          variants={fadeUp(0.4)}
+          initial="hidden"
+          whileInView="visible"
+          viewport={viewport}
+        >
           © 2026 Jardin des Rêves. All Rights Reserved.
-        </div>
-      </div>
+        </motion.div>
+      </motion.div>
     </footer>
   );
 };

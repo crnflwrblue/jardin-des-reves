@@ -1,4 +1,6 @@
 import React from "react";
+import { motion } from "framer-motion";
+import { fadeLeft, fadeRight, viewport } from "../motion/animation";
 
 const About = () => {
   return (
@@ -13,16 +15,27 @@ const About = () => {
       <div className="relative max-w-7xl mx-auto px-6 z-10">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           {/* IMAGE */}
-          <div>
+          <motion.div
+            variants={fadeLeft}
+            initial="hidden"
+            whileInView="visible"
+            viewport={viewport}
+          >
             <img
               src="/images/about-us.jpg"
               alt="About Jardin des Rêves"
               className="w-full h-150 object-cover rounded-lg"
             />
-          </div>
+          </motion.div>
 
           {/* CONTENT */}
-          <div className="space-y-6">
+          <motion.div
+            className="space-y-6"
+            variants={fadeRight}
+            initial="hidden"
+            whileInView="visible"
+            viewport={viewport}
+          >
             <h2 className="uppercase tracking-[0.2em] text-sm text-champagne">
               About Us
             </h2>
@@ -65,7 +78,7 @@ const About = () => {
               <div className="w-2 h-2 rounded-full bg-champagne" />
               <div className="h-px w-12 bg-champagne" />
             </div>
-          </div>
+          </motion.div>
         </div>
       </div>
     </section>

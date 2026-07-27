@@ -1,9 +1,17 @@
 import React from "react";
+import { motion } from "framer-motion";
+import { fadeUp } from "../motion/animation";
 
 const CTA = () => {
   return (
     <section className="bg-sage relative overflow-hidden">
-      <div className="max-w-7xl mx-auto px-8 py-20 z-10">
+      <motion.div
+        className="max-w-7xl mx-auto px-8 py-20 z-10"
+        variants={fadeUp(0)}
+        initial="hidden"
+        whileInView="visible"
+        viewport={viewport}
+      >
         <div className="grid lg:grid-cols-2 items-center gap-10">
           <div>
             <h2 className="text-5xl text-neutral font-semibold font-cormorant leading-tight">
@@ -30,7 +38,7 @@ const CTA = () => {
             </div>
           </div>
         </div>
-      </div>
+      </motion.div>
 
       {/* DECORATIVE FLOWER */}
       <img

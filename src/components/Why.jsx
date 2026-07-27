@@ -1,5 +1,7 @@
 import React from "react";
 import { whyItems } from "../constant/data";
+import { motion } from "framer-motion";
+import { fadeUp } from "../motion/animation";
 
 const Why = () => {
   return (
@@ -7,8 +9,12 @@ const Why = () => {
       <div className="max-w-7xl mx-auto px-6">
         <div className="grid md:grid-cols-4 gap-8">
           {whyItems.map((item, index) => (
-            <div
+            <motion.div
               key={index}
+              variants={fadeUp(index * 0.15)}
+              initial="hidden"
+              whileInView="visible"
+              viewport={viewport}
               className="flex items-center justify-center gap-4 md:border-r last:border-r-0 border-champagne pr-5"
             >
               <div className="text-champagne flex-shrink-0">
@@ -22,7 +28,7 @@ const Why = () => {
 
                 <p className="text-sm mt-2 text-gray">{item.text}</p>
               </div>
-            </div>
+            </motion.div>
           ))}
         </div>
       </div>
