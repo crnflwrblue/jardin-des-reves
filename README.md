@@ -15,8 +15,8 @@ The React Compiler is not enabled on this template because of its impact on dev 
 
 If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
 
-## Stock Images
-Photo by cottonbro studio from Pexels: https://www.pexels.com/photo/flowers-and-apples-on-white-sheet-10295078/ &nbsp
+### Stock Images
+Photo by cottonbro studio from Pexels: https://www.pexels.com/photo/flowers-and-apples-on-white-sheet-10295078/ <br>
 Photo by Secret Garden from Pexels: https://www.pexels.com/photo/colorful-spring-bouquet-in-modern-vase-2879820/
 Photo by Secret Garden from Pexels: https://www.pexels.com/photo/fresh-minimalistic-flower-compositions-on-white-table-2879815/
 Photo by Secret Garden from Pexels: https://www.pexels.com/photo/photo-of-flowers-in-vase-2879813/
@@ -25,12 +25,12 @@ Photo by Marina Podrez from Pexels: https://www.pexels.com/photo/beautiful-color
 Photo by Secret Garden from Pexels: https://www.pexels.com/photo/photo-of-flowers-in-vase-2879819/
 Photo by    www.kaboompics.com from Pexels: https://www.pexels.com/photo/vase-with-bouquet-6757651/
 
-## PNGs
+### PNGs
 https://www.magnific.com/free-vector/hand-drawn-flat-design-simple-flower-outline_25563968.htm#fromView=serie&page=1&position=7
 https://www.magnific.com/free-vector/hand-drawn-flat-design-simple-flower-outline_25563949.htm#fromView=search&page=1&position=8&uuid=f3a769ff-732b-4827-aa16-be0e43c6cdbb&query=Flower+outline+svg
 
 
-## npm dependencies
+### npm dependencies
 npm i react-icons
 npm i swiper
 
